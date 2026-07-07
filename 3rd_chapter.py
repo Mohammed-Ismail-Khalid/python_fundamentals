@@ -21,15 +21,38 @@ x -= 1
 print(x)
 x *= 2
 print(x)
-"""
+
+import math #since floor and useful functions are not built-in functions
 #Rounding numbers
 #measure distance
 print(abs(2 - 10)) #absolute value
 
+price = 35.68685698
+print(round(price))
+print(round(price, 2)) #rounding to 2 decimal places. That means round(number, ndigits)
+print(math.floor(price))
+print(math.ceil(price))
+print(math.trunc(price)) #trunc cut out the decimals and give the exact number without decimals
+#int vs trunc, trunc inorder to make sense because int is usually used for changing data types
 
+#Random
+import random
+#random is used for dummy data generation
+print(random.random()) #could give float
+print(random.randint(1,6)) #randint(start, end)
 
+#validation
+#to check wheather a number when its digits could be hidden is an integer. In data engineering 
+x = 7.0
+print(x.is_integer()) #is_integer is a method thats why we are using .
 
+y = 7.1
+print(y.is_integer())
 
+#isinstance(value, type) checks if a value belongs to a certain data type.  bool
+x = 70.4
+print(isinstance(x, int))
+"""
 
 
 
