@@ -52,8 +52,7 @@ print(y.is_integer())
 #isinstance(value, type) checks if a value belongs to a certain data type.  bool
 x = 70.4
 print(isinstance(x, int))
+#Generate a random integer between 1 and 100, and check if the result is an even number
 """
-
-
 
 
