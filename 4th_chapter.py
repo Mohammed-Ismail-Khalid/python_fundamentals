@@ -17,8 +17,14 @@ print(any([email, phone, username]))
 print(all([email, phone, username])) #all values should be true inorder to be true
 """
 #Comparisioin Operator
-print(10 != 10)
+#print(10 != 10)
 #strings can be compared too, alphabetically. Also case sensitive
+#chained comparision, left to right
+print(5 < 4 < 6) #everything should be true
+
+#is age between 18 and 30?
+age = 20
+print(18 <= age <= 30)
 
 
 
