@@ -59,10 +59,51 @@ if submitted_project:
     print("Project is submitted")
 else:
     print("Project is not submitted")
-"""
+
 #Inline if & Match case
+#Inline must include else, and it doesnt have elif and can be stored in a variable
+#only used when logic is simple
+#Ex
+score = 100
+'''
+if score >= 90:
+    print("A")
+else:
+    print("F")
+'''
+'''
+#The above code can be written as
+grade = "A" if score >= 90 else "F"
+print(grade)
+'''
 
-
+#since we cant use elif, theres one way to get the same result
+'''
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+else:
+    print("F")
+'''
+'''
+#next level
+grade = ("A" if score >= 90 else "B" if score >= 80 else "F") #from here if you add more it doesnt look good and make sense so use classical if statment
+'''
+"""
+#Match case; really new
+#Normal eg
+country = "India"
+if country == "United States":
+    print("US")
+elif country == "India":
+    print("IN")
+elif country == "Egypt":
+    print("EG")
+elif country == "Germany":
+    print("De")
+else:
+    print("Unknown Country")
 
 
 
