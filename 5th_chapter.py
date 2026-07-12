@@ -90,10 +90,12 @@ else:
 #next level
 grade = ("A" if score >= 90 else "B" if score >= 80 else "F") #from here if you add more it doesnt look good and make sense so use classical if statment
 '''
-"""
-#Match case; really new
-#Normal eg
+
+#Match case; really new: can only be used for matching values
+
 country = "India"
+'''
+#Normal eg
 if country == "United States":
     print("US")
 elif country == "India":
@@ -104,8 +106,30 @@ elif country == "Germany":
     print("De")
 else:
     print("Unknown Country")
-
-
+'''
+#Match ones
+match country:
+    case "United States" | "USA": #| is used to match mutiple values in a single case
+        print("US")
+    case "India":
+        print("IN")
+    case "Egypt":
+        print("EG")
+    case "Germany":
+        print("DE")
+    case _: # _ is like 'else'
+        print("Unknown Country")
+"""
+#1 Python challenge
+'''
+Validate the Quality and Correctness of Email Values
+- Must not be emtpy
+- Must contain '.' and '@'
+- Must contain exactly one '@' symbol
+- Must end with '.com', '.org', or '.net'
+- Must not be longer than 254 characters
+- Must start and end with a letter or digit
+'''
 
 
 
