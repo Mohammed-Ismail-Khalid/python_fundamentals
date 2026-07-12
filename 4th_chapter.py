@@ -120,9 +120,16 @@ print(not user_email == '' and "@" in user_email and user_email[-4:] == ".com")
 user_name = "Khalid"
 print(type(user_name) == str and user_name is not None and len(user_name) > 5)
 """
+#5) Check if the user is either an admin or a moderator, and either they're not banned or they've verified their email.
+user = input("Are you an admin or moderator?: ").lower()
+user_email = input("Email please?: ").lower()
+user_type = ["admin","moderator"]
+check_user_type = user in user_type
 
+user_banned = False
+user_eamil_verified = "@" and ".com" in user_email
 
-
+print((user is not None and check_user_type) and (user_banned or user_eamil_verified))
 
 
 
