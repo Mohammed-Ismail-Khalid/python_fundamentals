@@ -119,8 +119,9 @@ print(not user_email == '' and "@" in user_email and user_email[-4:] == ".com")
 #4) Check if a username is a string, is not None, and is longer than 5 character
 user_name = "Khalid"
 print(type(user_name) == str and user_name is not None and len(user_name) > 5)
-"""
+
 #5) Check if the user is either an admin or a moderator, and either they're not banned or they've verified their email.
+#My solution
 user = input("Are you an admin or moderator?: ").lower()
 user_email = input("Email please?: ").lower()
 user_type = ["admin","moderator"]
@@ -131,5 +132,24 @@ user_eamil_verified = "@" and ".com" in user_email
 
 print((user is not None and check_user_type) and (user_banned or user_eamil_verified))
 
+#Grok solution
+# Get user inputs
+role = input("Enter your role (admin or moderator): ").strip().lower()
+email = input("Enter your email address: ").strip().lower()
+banned_input = input("Are you banned? (yes/no): ").strip().lower()
+
+# Boolean checks
+is_admin_or_moderator = role in ["admin", "moderator"]
+is_banned = banned_input == "yes"
+
+# Simple email verification (has @ and a dot)
+email_verified = "@" in email and "." in email
+
+# The required condition:
+# (admin OR moderator) AND (NOT banned OR email verified)
+result = is_admin_or_moderator and (not is_banned or email_verified)
+
+print("\nCondition satisfied:", result)
+"""
 
 
