@@ -129,8 +129,27 @@ Validate the Quality and Correctness of Email Values
 - Must end with '.com', '.org', or '.net'
 - Must not be longer than 254 characters
 - Must start and end with a letter or digit
-'''
 
+
+email = "iszabikhalid@gmail.com"
+#ending_email = ['.com', '.org', '.net']
+email = email.strip()
+
+if email == "":
+    print("email must not be empty")
+if not ('.' in email and '@' in email):
+   print("Must contain '.' and '@'")
+if email.count('@') > 1:
+        print("email must contain only one '@")
+if not email.endswith(('.com', '.org', '.net')):
+        print("email must end with '.com', '.org', or '.net'")
+if len(email) > 254:
+        print("email must not be longer than 254 characters")
+if not(email[0].isalnum() and email[-1].isalnum()):
+        print("email must start and end with a letter or digit")
+else:
+    print("email is valid")
+'''
 
 
 
