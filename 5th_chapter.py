@@ -149,8 +149,37 @@ if not(email[0].isalnum() and email[-1].isalnum()):
         print("email must start and end with a letter or digit")
 else:
     print("email is valid")
-'''
 
+#2 Python Challenge
+Validate the Quality and Correctness of Password
+- Must not be empty
+- Must be at least 8 characters
+- Must include at least 1 uppercase
+- Must include at least 1 lowercase
+- Must not be same as the email
+- Must not contain any spaces
+- Must start and end with a letter or digit
+
+email = "iszabikhalid@gmail.com"
+password = "Ismail@w2043t"
+
+if password == "":
+    print("Must not be empty")
+if not len(password) >= 8:
+    print("Must be at least 8 characters")
+if password == password.upper():
+    print("Must include at least 1 uppercase")
+if password == password.lower():
+    print("Must include at least 1 lowercase")
+if password == email:
+    print("Must not be same as email")
+if password.count(" ") > 0:
+    print("Must not contain any spaces")
+if not (password[0].isalnum() and password[-1].isalnum()):
+    print("Must start and end with a letter or a digit")
+else:
+    print("Password is Valid")
+'''
 
 
 
