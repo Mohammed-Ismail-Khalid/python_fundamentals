@@ -47,7 +47,7 @@ for score in scores:
     total += score
     print("Current Total:", total)
 print("Final total", total)
-'''
+
 #2) We use for loops to transform data like cleaning data before processing
 #Example
 files = [' Report.csv ', 'DATA.csv ', ' final.TXT']
@@ -55,6 +55,129 @@ for file in files:
     file = file.strip().lower().replace('.txt', '.csv')
     print(f"Processing {file}")
     #Always remember: Clean first, transform second -- always in that order
+
+#1 Python Challenge
+#Print the 7-times table from 1 to 10 using a for loop
+for number in range(1,11):
+    print(f"7 X {number} = {7 * number}")
+
+#2 Python challenge
+#Print a left-aligned pyramid of stars with 6 rows using a for loop
+for star in range(1, 7):
+    print(star * '*')
+
+#Advanced for-loop
+#Break Statement - it stops the loop immediately; it jumps out and ends the loop right away
+#Example
+names = ['john', 'maria', '', 'khalid']
+for name in names:
+    if name == '':
+        print('Empty value detected!')
+        break
+    print(f'Name = {name}')
+
+#Continue statement - It skips one loop cycle without stopping the loop
+#Example
+names = ['john', 'maria', '', 'khalid']
+for name in names:
+    if name == '':
+        print('Empty value detected!')
+        continue
+    print(f'Name = {name}')
+#Use continue to skip bad or empty data without stopping the whole loop
+
+#Pass statement = It is a placeholder where nothing happens; for now.. just keep going. Do nothing...
+#Example
+names = ['john', 'maria', '', 'khalid']
+for name in names:
+    if name == '':
+        pass #todo: Handle Empty Value
+        #later maybe handle the todo and do write below code for example
+        #name = name.replace('', 'unknown')
+    print(f'Name = {name}')
+
+#Task: Skip weekends in calender loop
+days = ['Mon', 'Sun', 'Wed', 'Tue']
+weekends = ['Sat', 'Sun'] #created this inorder to avoid hardcoding values inside for or if. Instead, define them as variables
+for day in days:
+    if day in weekends: #added weekends instead of harcodeing ['Sat', 'Sun']
+        continue
+    print(f'Workday: {day}')
+
+#Task: Scan emails to block unsafe data from entering your system
+emails =[
+    'data@gmail.com',
+    'baraa@outlook.de',
+    'DROP TABLE USERS;',
+    'maria@gmail.com'
+]
+
+for email in emails:
+    if ';' in email:
+        print('SQL Injection: Hacker Attack') #hackers using sql injection to hack, one of the easiest ways baraa says
+        break
+    print(f'Processing Email: {email}')
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
