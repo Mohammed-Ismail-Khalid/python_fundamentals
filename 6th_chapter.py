@@ -244,8 +244,8 @@ for y in years:
     for m in months:
         for d in days:
             print(f"report_{y}_{m}_{d}.csv")
-'''
-#data engineering use case; working with tables
+
+#data engineering/analyst use case; working with tables; sql quarry said baraa
 #Example
 # SELECT count(*) FROM customers where id IS NULL;
 tables = ['coustomers', 'orders', 'products', 'prices']
@@ -254,7 +254,7 @@ columns = ['id', 'create_date']
 for t in tables:
     for c in columns:
         print(f'SELECT count(*) FROM {t} WHERE {c} is NULL:')
-
+'''
 
 
 
