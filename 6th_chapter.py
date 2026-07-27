@@ -254,12 +254,25 @@ columns = ['id', 'create_date']
 for t in tables:
     for c in columns:
         print(f'SELECT count(*) FROM {t} WHERE {c} is NULL:')
+
+#While loop
+#Repeats a block of code - over and over as long as condition is True!
+#in for loop we are iterating in a predefined sequence and predefined condition. 
+#in while loop the code block is repeated as long as the condition is true. Involves risk!; Unknown times!
+#while loop should have Initialization then condition then the initialzation should be updated
+
+#Task: Build a counter from 1 to 5
+count = 1 #initialization
+while count <= 5: #condition
+    print(count)
+    count += 1 #update
+
+#Task: Write a program that keeps askinig "Do you agree?" until the user types "yes"
+answer = ""
+while answer != "yes":
+    answer = input("Do you agree?(yes/no): ")
+print("Thank you")
 '''
-
-
-
-
-
 
 
 
