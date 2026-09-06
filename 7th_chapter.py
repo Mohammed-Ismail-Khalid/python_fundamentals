@@ -24,9 +24,28 @@
 10) How to Transform a list
 11) How to Filter a list
 12) List Comprehension
-'''
+
 #1) How to create a list
 empty_list = [] # empty list
+letters = ['a', 'b', 'c', 'd'] # list of letters
+mixed_data_types = [1, 'a', 3.14, True, None] # list with mixed data types
 print(empty_list) # output: []
 print(type(empty_list)) # output: <class 'list'>
+print(letters) # output: ['a', 'b', 'c', 'd']
+print(type(letters)) # output: <class 'list'>
+print(mixed_data_types) # output: [1, 'a', 3.14, True, None]
+print(type(mixed_data_types)) # output: <class 'list'>
 #For behind the scenes, read notes
+
+#there is also a list built-in function called list() which can be used to create a list from an iterable object like a string, tuple, or set. For example:
+string_to_list = list("hello") # converts string to list of characters
+print(string_to_list) # output: ['h', 'e', 'l', 'l', 'o'] #by AI in VS code
+'''
+empty = list() # empty list using list() built-in function
+print(empty) # output: []
+
+letters = list('Python') # converts string to list of characters
+print(letters) # output: ['P', 'y', 't', 'h', 'o', 'n']
+
+numbers = list(range(5)) # creates a list of numbers from 0 to 4
+print(numbers) # output: [0, 1, 2, 3, 4]
