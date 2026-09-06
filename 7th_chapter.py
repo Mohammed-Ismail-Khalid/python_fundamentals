@@ -49,7 +49,7 @@ print(letters) # output: ['P', 'y', 't', 'h', 'o', 'n']
 
 numbers = list(range(5)) # creates a list of numbers from 0 to 4
 print(numbers) # output: [0, 1, 2, 3, 4]
-'''
+
 #Nested list matrix
 matrix = [['a', 'b', 'c'], 
           ['d', 'e', 'f'], 
@@ -64,7 +64,7 @@ mixed_matrix = [[1, 2, 3],
 
 print(mixed_matrix) # output: [[1, 2, 3], ['a', 'b', 'c'], [True, False, None]]
 print(type(mixed_matrix)) # output: <class 'list'>
+'''
 
-
-
+#2) how to access and read elements from a list
 
