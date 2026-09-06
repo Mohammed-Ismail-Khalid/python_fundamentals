@@ -40,7 +40,7 @@ print(type(mixed_data_types)) # output: <class 'list'>
 #there is also a list built-in function called list() which can be used to create a list from an iterable object like a string, tuple, or set. For example:
 string_to_list = list("hello") # converts string to list of characters
 print(string_to_list) # output: ['h', 'e', 'l', 'l', 'o'] #by AI in VS code
-'''
+
 empty = list() # empty list using list() built-in function
 print(empty) # output: []
 
@@ -49,3 +49,22 @@ print(letters) # output: ['P', 'y', 't', 'h', 'o', 'n']
 
 numbers = list(range(5)) # creates a list of numbers from 0 to 4
 print(numbers) # output: [0, 1, 2, 3, 4]
+'''
+#Nested list matrix
+matrix = [['a', 'b', 'c'], 
+          ['d', 'e', 'f'], 
+          ['g', 'h', 'i']] #best practice to use nested list for matrix representation
+
+print(matrix) # output: [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']]
+print(type(matrix)) # output: <class 'list'>
+
+mixed_matrix = [[1, 2, 3], 
+                ['a', 'b', 'c'], 
+                [True, False, None]] # nested list with mixed data types
+
+print(mixed_matrix) # output: [[1, 2, 3], ['a', 'b', 'c'], [True, False, None]]
+print(type(mixed_matrix)) # output: <class 'list'>
+
+
+
+
