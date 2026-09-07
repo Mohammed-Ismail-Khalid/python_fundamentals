@@ -105,6 +105,57 @@ matrix = [['a', 'b', 'c'], # Row 0
 print(matrix[:2]) # output: [['a', 'b', 'c'], ['d', 'e', 'f']] - slicing the first two rows
 print(matrix[1:]) # output: [['d', 'e', 'f'], ['g', 'h', 'i']] - slicing from the second row to the end
 print(matrix[2][:2]) # output: ['g', 'h'] - slicing the first two elements of the last row
+
+#Unpacking Lists
+person = ['Maria', 29, 'Data Engineer', 'Spain']
+#name = person[0]
+#age = person[1]
+#role = person[2]
+#country = person[3]
+
+#Unpacking the list into variables
+name, age, role, country = person #unpacking is a way to assign the values of a list to multiple variables in a single line of code. It allows for more concise and readable code, especially when dealing with lists that contain multiple values. The number of variables on the left side of the assignment must match the number of elements in the list being unpacked. If there are more elements in the list than variables, a ValueError will be raised. Similarly, if there are fewer elements in the list than variables, a ValueError will also be raised.
+print(name) # output: 'Maria'
+print(age) # output: 29
+print(role) # output: 'Data Engineer'
+print(country) # output: 'Spain'
+
+name, *details, country = person #unpacking with the * operator allows for capturing multiple values from a list into a single variable. In this case, the * operator is used to capture all values between the first and last elements of the list into the 'details' variable. This is useful when you want to unpack a list but don't know how many elements it contains or when you want to ignore certain elements.
+print(name) # output: 'Maria'
+print(details) # output: [29, 'Data Engineer'] - captures the middle elements of the list into a new list called 'details'
+print(country) # output: 'Spain'
+
+name, *details = person #unpacking with the * operator allows for capturing multiple values from a list into a single variable. In this case, the * operator is used to capture all values after the first element of the list into the 'details' variable. This is useful when you want to unpack a list but don't know how many elements it contains or when you want to ignore certain elements.
+print(name) # output: 'Maria'
+print(details) # output: [29, 'Data Engineer', 'Spain'] - captures all elements after the first element of the list into a new list called 'details'
+
+*details, role, country = person #unpacking with the * operator allows for capturing multiple values from a list into a single variable. In this case, the * operator is used to capture all values before the last element of the list into the 'details' variable. This is useful when you want to unpack a list but don't know how many elements it contains or when you want to ignore certain elements.  
+print(details) # output: ['Maria', 29] - captures all elements before the last element of the list into a new list called 'details'
+print(role) # output: 'Data Engineer'
+print(country) # output: 'Spain'
+# Rules:
+# we are allowed to use only one * operator in unpacking a list, and it can be used to capture multiple values from the list into a single variable. The * operator can be placed before or after the variable name, depending on whether you want to capture values before or after a certain element in the list. However, you cannot use multiple * operators in a single unpacking statement, as this would create ambiguity in how to assign the values to the variables.
+# Nr. of variables must match the values exactly -- not less, not more
+# * Asterisk colllects leftovers, and its fine if there are none
+# You can unpack any sequence (list, tuples, strings, etc.). Anything that iterable
+#Eg
+numbers = 'Hi'
+
+first, *rest = numbers #unpacking a string into variables using the * operator. The first character of the string is assigned to the 'first' variable, while the remaining characters are captured into the 'rest' variable as a list. This is possible because strings are iterable in Python, meaning they can be treated like a sequence of characters that can be unpacked into variables.
+print(first) # output: 'H' - the first character of the string is assigned to the 'first' variable
+print(rest) # output: ['i'] - the remaining characters of the string are captured into the 'rest' variable as a list
 '''
+
+
+
+
+
+
+
+
+
+
+
+
 
 
