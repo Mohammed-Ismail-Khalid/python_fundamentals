@@ -182,7 +182,94 @@ list2 = [1, 2, 3]
 
 print(list1 == list2) # output: True - checks if the values of the two lists are equal
 print(list1 is list2) # output: False - checks if the two lists are the same object in memory (they are not, even though they have the same values)
+
+#Changing/Modifying a list
+#1) adding items
+#2) removing items
+#3) updating items
+
+#1) add item
+letters = ['a', 'b', 'c', 'd']
+#append() method adds an item to the end of the list. It takes a single argument
+#letters.append('x')
+#letters.append('y')
+
+#insert() method adds an item at a specific index in the list. It takes two arguments: the index where the item should be inserted and the item itself.
+#letters.insert(0, 'x') #inserts 'x' at index 0, shifting all other elements to the right
+#letters.insert(3, 'y') #inserts 'y' at index 3, shifting all other elements to the right
+#print(letters) # output: ['x', 'a', 'b', 'y', 'c', 'd'] - the list now contains the newly added elements at the specified indices
+
+#Adding matrix
+
+matrix = [['a', 'b', 'c'],  # Row 0
+          ['d', 'e', 'f'],  # Row 1
+          ['g', 'h', 'i']   # Row 2
+          ]
+
+#matrix.append(['x', 'y', 'z']) # appends a new row ['x', 'y', 'z'] to the end of the matrix
+#print(matrix) # output: [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i'], ['x', 'y', 'z']] - the matrix now contains the newly added row at the end
+#matrix.insert(0, ['a', 'a', 'a']) # inserts a new row ['a', 'a', 'a'] at index 0, shifting all other rows down
+#print(matrix) # output: [['a', 'a', 'a'], ['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i'], ['x', 'y', 'z']] - the matrix now contains the newly added row at the specified index
+#print(matrix) # output: [['a', 'a', 'a'], ['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i'], ['x', 'y', 'z']] - the matrix now contains the newly added rows at the specified indices
+
+matrix[1].append('x') # appends 'x' to the second row of the matrix
+print(matrix) # output: [['a', 'b', 'c'], ['d', 'e', 'f', 'x'], ['g', 'h', 'i']] - the second row of the matrix now contains the newly added element 'x' at the end
+matrix[0].insert(0, 'z') # inserts 'z' at index 0 of the first row of the matrix, shifting all other elements to the right
+print(matrix) # output: [['z', 'a', 'b', 'c'], ['d', 'e', 'f', 'x'], ['g', 'h', 'i']] - the first row of the matrix now contains the newly added element 'z' at the beginning
+
+
+#change/remove items in the list
+#Remove
+letters = ['a', 'b', 'c']
+#letters.clear() # removes all elements from the list, leaving it empty
+#print(letters) # output: [] - the list is now empty
+
+#letters.remove('a') # removes the first occurrence of 'a' from the list
+#print(letters) # output: ['b', 'c'] - the list now contains only the elements 'b' and 'c', with 'a' removed 
+
+#removed = letters.pop() # removes and returns the last element of the list
+#removed = letters.pop(1) # removes and returns the element at index 1 of the list
+#print(letters) # output: ['a', 'b'] - the list now contains only
+#print("Removed Item:", removed)
+
+#Removing matrix
+matrix = [['a', 'b', 'c'],  # Row 0
+          ['d', 'e', 'f'],  # Row 1
+            ['g', 'h', 'i']   # Row 2
+            ]
+
+#matrix.remove(['a', 'b', 'c']) # removes the first occurrence of the row ['a', 'b', 'c'] from the matrix
+#print(matrix) # output: [['d', 'e', 'f'], ['g', 'h', 'i']] - the matrix now contains only the rows ['d', 'e', 'f'] and ['g', 'h', 'i'], with the first row removed
+
+#matrix.pop() # removes and returns the last row of the matrix
+#print(matrix) # output: [['a', 'b', 'c'], ['d', 'e', 'f']] - the matrix now contains only the first two rows, with the last row removed
+
+#matrix[1].remove('e') # removes the first occurrence of 'e' from the second row of the matrix
+#print(matrix) # output: [['a', 'b', 'c'], ['d', 'f'], ['g', 'h', 'i']] - the second row of the matrix now contains only the elements 'd' and 'f', with 'e' removed 
+
+matrix[-1].pop(0) # removes and returns the first element of the last row of the matrix
+matrix[0].pop() # removes and returns the last element of the first row of the matrix
+print(matrix) # output: [['a', 'b'], ['d', 'e', 'f'], ['h', 'i']] - the first row of the matrix now contains only the elements 'a' and 'b', with 'c' removed, and the last row of the matrix now contains only the elements 'h' and 'i', with 'g' removed   
+
+#change your list - update items in the list
+#update
+letters = ['a', 'b', 'c']
+letters[0] = 'x' # updates the first element of the list to 'x'
+letters[1] = 'y' # updates the second element of the list to 'y'
+#letters = 'z' #gotta be careful, this will change the list to a string, not a list anymore 
+#print(type(letters)) 
 '''
+#update matrix
+matrix = [['a', 'b', 'c'],  # Row 0
+          ['d', 'e', 'f'],  # Row 1
+          ['g', 'h', 'i']   # Row 2
+        ]
+
+matrix[-1] = ['x', 'y', 'z'] # updates the last row of the matrix to ['x', 'y', 'z']
+matrix[0][0] = '-'
+matrix[1][1] = '-' # updates the second element of the second row of the matrix to '-'
+matrix[-1][-1] = '-' # updates the last element of the last row of the matrix to '-'    
+print(matrix) # output: [['-', 'b', 'c'], ['d', '-', 'f'], ['x', 'y', '-']] - the matrix now contains the updated values in the specified positions 
 
 
 
