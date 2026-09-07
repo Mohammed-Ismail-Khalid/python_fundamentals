@@ -176,13 +176,13 @@ print("Index:", numbers.index(5))
 
 print(4 in numbers)
 print(8 not in numbers)
-'''
+
 list1 = [1, 2, 3]
 list2 = [1, 2, 3]
 
 print(list1 == list2) # output: True - checks if the values of the two lists are equal
 print(list1 is list2) # output: False - checks if the two lists are the same object in memory (they are not, even though they have the same values)
-
+'''
 
 
 
