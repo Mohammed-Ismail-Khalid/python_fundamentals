@@ -144,14 +144,44 @@ numbers = 'Hi'
 first, *rest = numbers #unpacking a string into variables using the * operator. The first character of the string is assigned to the 'first' variable, while the remaining characters are captured into the 'rest' variable as a list. This is possible because strings are iterable in Python, meaning they can be treated like a sequence of characters that can be unpacked into variables.
 print(first) # output: 'H' - the first character of the string is assigned to the 'first' variable
 print(rest) # output: ['i'] - the remaining characters of the string are captured into the 'rest' variable as a list
+
+#skipping items in unpacking 
+person = ['Maria', 29, 'Data Engineer', 'Spain']
+name, _, role, _ = person #unpacking a list into variables while skipping certain elements using the underscore (_) as a placeholder. The underscore is a convention in Python to indicate that a value is being ignored or not used. In this case, the second and fourth elements of the 'person' list are skipped, and only the first and third elements are assigned to the 'name' and 'role' variables, respectively. and it will be stored in memory
+print(name) # output: 'Maria' - the first element of the list is assigned to the 'name' variable
+print(role) # output: 'Data Engineer' - the third element of the list is assigned to the 'role' variable
+#unlike the * operator, which captures multiple values into a single variable, the underscore is used to ignore specific values in the unpacking process. This is useful when you want to extract only certain elements from a list while disregarding others.
+
+name, *_, country = person #unpacking a list into variables while skipping certain elements using the underscore (_) as a placeholder. The underscore is a convention in Python to indicate that a value is being ignored or not used. In this case, the second and third elements of the 'person' list are skipped, and only the first and last elements are assigned to the 'name' and 'country' variables, respectively. The * operator is used to capture all values between the first and last elements of the list into the '_' variable, which is ignored.
+print(name) # output: 'Maria' - the first element of the list is assigned to the 'name' variable
+print(country) # output: 'Spain' - the last element of the list is assigned to the 'country' variable
+
+# How to Explore and Analyze lists
+numbers = [1, 5, 5, 2, 4, 3]
+print("Max:", max(numbers)) # output: 5 - returns the maximum value in the list
+print("Min:", min(numbers)) # output: 1 - returns the minimum value in the list
+print("Sum:", sum(numbers)) # output: 15 - returns the sum of all values in the list
+print("Length:", len(numbers)) # output: 6 - returns the number of elements in the list
+
+print("All:", all(numbers)) # output: True - returns True if all elements in the list are truthy (non-zero, non-empty, etc.), otherwise returns False
+print("All:", all([1, 0, 2])) # output: False - returns False because one of the elements (0) is falsy
+print("All:", all(['a', '', 'b'])) # output: False - returns False because one of the elements (empty string) is falsy
+
+print("Any:", any(numbers)) # output: True - returns True if any element in the list is truthy, otherwise returns False
+print("Any:", any([0, 0, 0])) # output: False - returns False because all elements are falsy (zero)
+print("Any:", any(['a', '', 'b'])) # output: True - returns True because at least one element ('a' or 'b') is truthy
+
+print("Count:", numbers.count(5))
+print("Index:", numbers.index(5))
+
+print(4 in numbers)
+print(8 not in numbers)
 '''
+list1 = [1, 2, 3]
+list2 = [1, 2, 3]
 
-
-
-
-
-
-
+print(list1 == list2) # output: True - checks if the values of the two lists are equal
+print(list1 is list2) # output: False - checks if the two lists are the same object in memory (they are not, even though they have the same values)
 
 
 
