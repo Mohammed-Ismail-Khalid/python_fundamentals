@@ -258,7 +258,7 @@ letters[0] = 'x' # updates the first element of the list to 'x'
 letters[1] = 'y' # updates the second element of the list to 'y'
 #letters = 'z' #gotta be careful, this will change the list to a string, not a list anymore 
 #print(type(letters)) 
-'''
+
 #update matrix
 matrix = [['a', 'b', 'c'],  # Row 0
           ['d', 'e', 'f'],  # Row 1
@@ -270,7 +270,7 @@ matrix[0][0] = '-'
 matrix[1][1] = '-' # updates the second element of the second row of the matrix to '-'
 matrix[-1][-1] = '-' # updates the last element of the last row of the matrix to '-'    
 print(matrix) # output: [['-', 'b', 'c'], ['d', '-', 'f'], ['x', 'y', '-']] - the matrix now contains the updated values in the specified positions 
-
+'''
 
 
 
