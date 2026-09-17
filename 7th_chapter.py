@@ -395,13 +395,13 @@ numbers = [1, 2, 3, 4]
 #comb = list(zip(letters, numbers))
 comb = list(zip(letters, numbers, "Hi")) #can be added like this add it will stop with two pairs
 print(comb)
-'''
-#Baraa own use case
+
+#Baraa own use case; Pair Customers with thier IDs (rebuild the relationship)
 ids = [101, 102, 103]
 names = ['Ali', 'Sara', 'John']
 #print(ids + names) #output: [101, 102, 103, 'Ali', 'Sara', 'John'] ; doesnt make any sense
-print(list(zip(ids, names)))
-
+print(list(zip(ids, names))) #output: [(101, 'Ali'), (102, 'Sara'), (103, 'John')]
+'''
 
 
 
