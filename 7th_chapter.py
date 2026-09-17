@@ -277,7 +277,7 @@ letters = ['c', 'a', 'b']
 letters.sort(reverse = True) # sorts the list in descending order, meaning from biggest to smallest
 
 print(letters) # output: ['c', 'b', 'a'] - the list is now sorted in descending order
-'''
+
 #Sorting matrix
 matrix = [['d', 'e', 'f'],  # Row 0
           ['g', 'h', 'i'],  # Row 1
@@ -285,7 +285,98 @@ matrix = [['d', 'e', 'f'],  # Row 0
 ]
 
 matrix.sort() # sorts the matrix in ascending order based on the first element of each row
-print(matrix) # output: [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']] - the matrix is now sorted in ascending order based on the first element of each row 
+print(matrix) # output: [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']] - the matrix is now sorted in ascending order based on the first element of each row.  The sort() method modifies the original list in place and does not return a new list.
+#if we have a similar first element in the rows, it will sort based on the second element, and so on.
+
+#if we want to sort based on a specific list
+matrix = [['d', 'e', 'f'],  # Row 0
+          ['a', 'z', 'i'],  # Row 1
+          ['a', 'a', 'c']   # Row 2
+]
+
+matrix[1].sort()
+print(matrix) #only second list got sorted
+
+#sort the data without changing the original list
+letters = ['c', 'a', 'b']
+#new_list = sorted(letters) #keep the original list and create a clean and organised list
+new_list = sorted(letters, reverse = True) #same is true for this function, it will reverse it
+print('Orignal List:', letters)
+print('Sorted list:', new_list) 
+
+letters = ['c', 'a', 'b']
+#if i dont care about the order of data just want to flip right to left then use reverse() method
+letters.reverse()
+print(letters)
+
+letters = ['c', 'a', 'b']
+#so inorder to keep the original list as is, then use this funtion
+#new_list = reversed(letters) #this creates <list_reverseiterator object at 0x0000018DCDD2BA00>; an advanced topic; objects. So need to convert this into list
+new_list = list(reversed(letters))
+print('Original List:', letters)
+print('Reversed Sorted List:', new_list)
+
+#Copying List
+#Assignement =
+letters = ['a', 'b', 'c'] 
+letters_copy = letters #this assignement will reference the same list in memory that means if i modify something here it will effect the orignal meaning no new copy of the same list is created inorder to work on it without consequences
+letters_copy.append('z') #for eg this is effecting the original list
+letters.pop() #removes the latest that means the last element
+print('Original:', letters) 
+print('Copy:', letters_copy)
+
+#Shallow copy
+letters = ['a', 'b', 'c'] 
+letters_copy = letters.copy() #creates a container/list which is indepent of the origianl; creates a separate list in memory of the top level, meaning that only the parent list is independent, child elements will be pointed to the original hence can be effected by modification
+letters.pop()
+letters_copy.append('z')
+print('Original:', letters) 
+print('Copy:', letters_copy)
+
+#Deep copy
+#inorder to overcome shallow copy there is actually no built in function that can do that so need a separate copy module; imported
+import copy
+matrix = [['a', 'b'],  #Row 0
+          ['c', 'd']  #Row 1
+          ]
+
+matrix_copy = copy.deepcopy(matrix) #Here copy. is module name. deepcopy() function creates a true, independent copy for all levels
+matrix.pop()
+matrix_copy[0].append('z') #add z to the first list
+print('Original:', matrix)
+print('Copy:    ', matrix_copy)
+#note: deepcopy() function instead of it if you want shallow copy from this module use copy.copy()
+
+#Testing 
+#IS operator
+import copy
+original = [['a', 'b'],  #Row 0
+          ['c', 'd']  #Row 1
+          ]
+
+#Asignment
+copy1 = original
+print("Same Object?", original is copy1, "\n")
+
+#Shallow copy
+copy2 = original.copy()
+print("Same Object?", original is copy2)
+print("Shared Lists?", original[0] is copy2[0], "\n")
+
+#Deep Copy
+copy3 = copy.deepcopy(original)
+print("Same Object?", original is copy3)
+print("Shared List?", original[0] is copy3[0], "\n")
+#Tip: Use the 'is' operator to check if the copies are truly independent
+#Avoid Assignment = (Risky and confusing)
+#Use .copy() for simple, flat lists
+#use copy.deepcopy() for Nested lists
+#Always make extra copy for Experiments/Tests
+'''
+#Combining Lists
+
+
+
 
 
 
