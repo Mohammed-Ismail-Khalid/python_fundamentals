@@ -270,8 +270,22 @@ matrix[0][0] = '-'
 matrix[1][1] = '-' # updates the second element of the second row of the matrix to '-'
 matrix[-1][-1] = '-' # updates the last element of the last row of the matrix to '-'    
 print(matrix) # output: [['-', 'b', 'c'], ['d', '-', 'f'], ['x', 'y', '-']] - the matrix now contains the updated values in the specified positions 
-'''
 
+#Sorting list
+letters = ['c', 'a', 'b']
+#letters.sort() # sorts the list in ascending order, meaning to smallest to biggest
+letters.sort(reverse = True) # sorts the list in descending order, meaning from biggest to smallest
+
+print(letters) # output: ['c', 'b', 'a'] - the list is now sorted in descending order
+'''
+#Sorting matrix
+matrix = [['d', 'e', 'f'],  # Row 0
+          ['g', 'h', 'i'],  # Row 1
+          ['a', 'b', 'c']   # Row 2 
+]
+
+matrix.sort() # sorts the matrix in ascending order based on the first element of each row
+print(matrix) # output: [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']] - the matrix is now sorted in ascending order based on the first element of each row 
 
 
 
