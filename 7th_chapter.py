@@ -372,8 +372,36 @@ print("Shared List?", original[0] is copy3[0], "\n")
 #Use .copy() for simple, flat lists
 #use copy.deepcopy() for Nested lists
 #Always make extra copy for Experiments/Tests
-'''
+
 #Combining Lists
+letters = ['a', 'b', 'c']
+numbers = [1, 2, 3]
+#comb = letters + numbers  #add in one combined list
+comb = [letters, numbers] #like matrix, nested list
+print(comb)
+#print(letters * 2)
+
+#extend 
+letters = ['a', 'b', 'c']
+numbers = [1, 2, 3]
+numbers.extend(letters)
+print(letters)
+print(numbers) #extend doesnt create a new list; it expands the orignial one
+
+#combining using zip(); pairing elements from one to another list; creates tuple; stops at the shortest element pair
+letters = ['a', 'b', 'c']
+numbers = [1, 2, 3, 4]
+#comb = zip(letters, numbers) #prints iterative object; <zip object at 0x00000249C65B9A40>, need to convert it into list using list()
+#comb = list(zip(letters, numbers))
+comb = list(zip(letters, numbers, "Hi")) #can be added like this add it will stop with two pairs
+print(comb)
+'''
+#Baraa own use case
+ids = [101, 102, 103]
+names = ['Ali', 'Sara', 'John']
+#print(ids + names) #output: [101, 102, 103, 'Ali', 'Sara', 'John'] ; doesnt make any sense
+print(list(zip(ids, names)))
+
 
 
 
